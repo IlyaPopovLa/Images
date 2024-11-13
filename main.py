@@ -13,6 +13,6 @@ blue_offset = Image.blend (blue_cropleft, blue_cropcentre, 0.5)
 
 green_cropcentre = green.crop ((25, 0, 671, 522))
 
-new_image = Image.merge ("RGB", (red_offset, blue_offset, green_cropcentre))
+new_image = Image.merge ("RGB", (red_offset, green_cropcentre, blue_offset))
 new_image.thumbnail((80, 80))
 new_image.save ("new_monro.jpg")
